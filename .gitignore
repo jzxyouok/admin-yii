@@ -1,2 +1,9 @@
 /nbproject/private/
 /backend/views/layouts/main_1.php
+/vendor/
+
+nbproject/project.properties
+
+nbproject/project.xml
+
+composer.lock
