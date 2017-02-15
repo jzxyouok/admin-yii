@@ -132,7 +132,6 @@ class Menu extends \common\models\Menu
                 }
             }
         }
-        //var_dump($menus['child'][0]);var_dump($menus['main']);exit;
         return $menus;
     }
 

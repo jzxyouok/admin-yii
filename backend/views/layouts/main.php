@@ -15,7 +15,6 @@ $context = $this->context;
 $route = $context->action->getUniqueId()?:$context->getUniqueId().'/'.$context->defaultAction;
 $allMenu = Menu::getMenus($route); // 获取后台栏目
 $breadcrumbs = Menu::getBreadcrumbs($route); // 面包屑导航
-//dump($this);exit;
 
 $this->beginPage();
 ?>
@@ -57,10 +56,6 @@ $this->beginPage();
                     </div>
                 </div>
                 <!-- END LOGO -->
-                <!-- BEGIN MEGA MENU -->
-                <!-- DOC: Remove "hor-menu-light" class to have a horizontal menu with theme background instead of white background -->
-                <!-- DOC: This is desktop version of the horizontal menu. The mobile version is defined(duplicated) in the responsive menu below along with sidebar menu. So the horizontal menu has 2 seperate versions -->
-                
                 <!-- BEGIN HORIZANTAL MENU 一级栏目 -->
                 <?php echo $this->render('@app/views/layouts/public/menu.php', ['allMenu'=>$allMenu]); ?>
                 <!-- END HORIZANTAL MENU -->
@@ -178,10 +173,6 @@ $this->beginPage();
                     <!-- BEGIN PAGE BAR 快速导航 -->
                     <div class="page-bar">
                         <ul class="page-breadcrumb">
-                            <li>
-                                <a href="<?=Url::to('index/index')?>">主页</a>
-                                <i class="fa fa-circle"></i>
-                            </li>
                             <?php foreach($breadcrumbs as $breadcrumb): ?>
                             <li>
                                 <a href="#"><?=$breadcrumb['title']?></a>
